@@ -2,11 +2,13 @@
 
 ## 1) Create an S3 bucket and upload the demo dataset
 1. S3 → **Create bucket** (e.g., `cps-edge-s3-glue-demo`). Keep **Block all public access** ON and default encryption (SSE‑S3).
+![CPSH Glue Demo](./images/create-bucket.png)
 2. Upload the folder **`cps_demo_dataset`** with three prefixes:
    - `shipment-events/…`
    - `transport-events/…`
    - `equipment-events/…`
    Example partitioning: `…/year=2025/month=09/day=01/events.jsonl`.
+![CPSH Glue Demo](./images/upload-bucket.png)
 
 ## 2) Create the **Glue crawler service role**
 1. IAM → **Roles → Create role** → AWS service → **Glue** (trust `glue.amazonaws.com`).
