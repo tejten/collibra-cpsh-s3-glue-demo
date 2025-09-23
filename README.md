@@ -32,3 +32,5 @@ This repo shows how Collibra CPSH (via Edge) orchestrates **ephemeral AWS Glue c
 
 ## License
 MIT
+
+> Credits: Original material by **Tej Tenmattam** (Version 01, 2025‑09‑23).  
