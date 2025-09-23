@@ -1,0 +1,23 @@
+field,type,applies_to,description
+eventID,string,all,Unique event ID (UUID)
+eventType,string,all,"ShipmentEvent, TransportEvent, or EquipmentEvent (DCSA journeys)"
+eventClassifierCode,enum,all,"PLN (planned), EST (estimated), ACT (actual)"
+eventDateTime,datetime,all,Local date-time of the event (ISO 8601)
+eventCreatedDateTime,datetime,all,Date-time when the event was created by publisher (ISO 8601)
+shipmentEventTypeCode,enum,shipment,"RECE (Received), RELS (Released), CANC (Cancelled), BOOK (Booking)"
+carrierBookingReference,string,shipment,Carrier booking reference
+transportDocumentReference,string,shipment,Electronic bill of lading or waybill reference
+documentTypeCode,enum,shipment,"BOL (Bill of Lading), WB (Waybill), CO (Certificate of Origin)"
+transportEventTypeCode,enum,transport,"ARRI (Arrived), DEPA (Departed), ROLL (Rolled), OMIT (Omitted)"
+vesselIMONumber,string,transport,IMO number of vessel
+carrierVoyageNumber,string,transport,Carrier voyage number
+transportCallID,string,transport,Unique ID for port call
+equipmentEventTypeCode,enum,equipment,"GTIN (Gate in), GTOT (Gate out), LOAD (Loaded), DISC (Discharged), STUF (Stuffed), STRP (Stripped)"
+equipmentReference,string,equipment,ISO 6346 container number
+sealNumber,string,equipment,Seal number
+isEmpty,boolean,equipment,True if equipment is empty
+location.UNLocationCode,string,"transport,equipment,shipment",UN/LOCODE of event location
+location.facilityCode,string,"transport,equipment",SMDG terminal code (if applicable)
+location.facilityCodeListProvider,string,"transport,equipment",Provider of facility codes (SMDG)
+publisher,string,all,Publishing carrier or system
+linkedTransportCallID,string,equipment,Reference to related transport call (if any)
