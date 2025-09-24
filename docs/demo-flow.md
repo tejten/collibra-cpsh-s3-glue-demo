@@ -6,7 +6,7 @@
 - *Trust*: show **Owner/Steward**, **Accepted** status, and **Policy → Is governed by** relation.
 ![CPSH Glue Demo](./images/responsibilities.png)
 ![CPSH Glue Demo](./images/policy.png)
-- *Lineage*: Assets --> equipment_events (File Group asset type) --> Diagram
+- *Lineage*: Assets → equipment_events (File Group asset type) → Diagram
 ![CPSH Glue Demo](./images/lineage.png)
 - *Meaning*: open `equipmenteventtypecode` and show **GTIN/GTOT** glossary relations.
 ![CPSH Glue Demo](./images/business-terms.png)
