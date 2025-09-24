@@ -36,6 +36,7 @@ Assign each crawler to its matching domain; one Glue DB will be produced per dom
 
 ## 6) Run the synchronization
 Start from the S3 File System asset (or schedule). Edge will create crawlers, run them, ingest Glue DBs into Collibra, and delete crawlers afterwards.
+![CPSH Glue Demo](./images/edge-sync.png)
 
 ## 7) Governance 
 1. **Add Owner/Steward** on the three domains and the three tables.
