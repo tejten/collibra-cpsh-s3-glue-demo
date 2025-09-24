@@ -19,7 +19,9 @@
 - **Catalog → Register data source → S3 via Edge**
 ![CPSH Glue Demo](./images/register-data-source.png)
 - Community: your demo community; Name: **CPS – S3 Lake**.
+![CPSH Glue Demo](./images/edge-s3lake-config.png)
 - Save; open the asset → **Configuration → Connection details → Edit** → Runtime **Edge** → select your capability.
+![CPSH Glue Demo](./images/edge-s3-sync.png)
 
 ## 4) Create three **Storage Catalog** domains
 - **CPS – Shipment Events**, **CPS – Transport Events**, **CPS – Equipment Events**.
