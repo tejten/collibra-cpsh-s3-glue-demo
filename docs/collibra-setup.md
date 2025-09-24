@@ -1,13 +1,13 @@
 # Collibra Setup (CPSH + Edge)
 
 ## 1) Edge → AWS connection
-- **Settings → Edge → Sites → "<Your site>"" → Connections → Create**
+- **Settings → Edge → Sites → `Your site` → Connections → Create**
 - Provider: **AWS (for S3)**
 - Auth: **IAM** → paste the Edge IAM **Access key ID / Secret access key**.
 ![CPSH Glue Demo](./images/edge-connection.png)
 
 ## 2) Edge capability: **S3 synchronization**
-- **Sites → "<Site>"" → Capabilities → Add → “S3 synchronization”**
+- **Sites → `Your Site` → Capabilities → Add → “S3 synchronization”**
 - **AWS Connection**: select the one above
 - **IAM role**: `arn:aws:iam::<acct>:role/collibra-glue-crawler-role`
 - Keep **“Delete Glue database left after previous synchronization”** checked to auto‑clean prior DBs.
