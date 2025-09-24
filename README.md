@@ -4,10 +4,17 @@ This repo shows how Collibra CPSH (via Edge) orchestrates **ephemeral AWS Glue c
 
 👉 Start with **docs/aws-setup.md**, then **docs/collibra-setup.md**, and present using **docs/demo-flow.md**.
 
+## Business demo narrative:
+Follow container MSCU through Asia–EU: we capture Equipment events (GTIN/GTOT/LOAD/DISC), Transport events (ARRI/DEPA at UN/LOCODE + SMDG terminal), and Shipment events (BOOK/RECE/RELS). We catalog the event lake and expose governed metadata for BI and Control Tower teams.
+
 ## What you’ll demonstrate
 - Edge creates crawlers from Collibra definitions, crawls S3 prefixes, **creates one Glue database per Collibra domain**, ingests metadata into Catalog, then **deletes the crawlers**.
-- Governance: owners/stewards, glossary terms, policy → data relationships, and status **Candidate → Accepted**.
+- Governance: owners/stewards, glossary terms, lineage, policy → data relationships, and status **Candidate → Accepted**.
 - Consumption: Athena query + saved query link from the Collibra asset.
+
+Glue tells us what we have. Collibra tells us what we should use, who owns it, and why we can trust it, then gets people there in one click.
+
+Edge keeps AWS clean: crawlers and prior Glue DBs are created and removed automatically at sync time.
 
 ## Quick links
 - **AWS setup** → [docs/aws-setup.md](docs/aws-setup.md)
