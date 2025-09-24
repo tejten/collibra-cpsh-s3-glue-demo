@@ -14,6 +14,8 @@
 ![CPSH Glue Demo](./images/edge-capability.png)
 
 ## 3) Register the S3 File System
+- Make sure the user has the "Edge - View Edge connections and capabilities” permission.
+![CPSH Glue Demo](./images/edge-connections-capabilities.png)
 - **Catalog → Register data source → S3 via Edge**
 - Community: your demo community; Name: **CPS – S3 Lake**.
 - Save; open the asset → **Configuration → Connection details → Edit** → Runtime **Edge** → select your capability.
@@ -30,15 +32,9 @@ Assign each crawler to its matching domain; one Glue DB will be produced per dom
 ## 6) Run the synchronization
 Start from the S3 File System asset (or schedule). Edge will create crawlers, run them, ingest Glue DBs into Collibra, and delete crawlers afterwards.
 
-## 7) Governance polish (15 minutes)
+## 7) Governance 
 1. **Add Owner/Steward** on the three domains and the three tables.
 2. **Glossary**: create *CPS Glossary* and terms: **GTIN**, **GTOT**, **ARRI**, **ROLL**, **UN/LOCODE**. Link to columns (`transporteventtypecode`, `equipmenteventtypecode`, `location`).
 3. **Promote** key tables/columns **Candidate → Accepted**.
 4. **Policy**: create *External Sharing of CPS Events* policy and relate it to your tables. If needed, add relation types **Policy Governs → Table/Column/S3 File System** and include them in a **Scope**, then move your domains into that scope.
 5. **Athena**: save the rolled‑calls query and add the **Saved Query link** as a Related resource on a Collibra asset; attach the `.sql` file for portability.
-
-## 8) Troubleshooting
-- **`The security token included in the request is invalid`** → rotate IAM keys in the Edge connection user.
-- **`glue:ListCrawlers not authorized`** → attach policy with `List*`/`Get*`/`Create*` permissions and `iam:PassRole`.
-- **UnknownHostException** from Edge → fix proxy/DNS/egress.
-- **Athena Run disabled** → set workgroup results S3 location.
