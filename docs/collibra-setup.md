@@ -32,6 +32,7 @@
 - `cps-transport` → `s3://<bucket>/cps_demo_dataset/transport-events/`
 - `cps-equipment` → `s3://<bucket>/cps_demo_dataset/equipment-events/`
 Assign each crawler to its matching domain; one Glue DB will be produced per domain at sync time.
+![CPSH Glue Demo](./images/edge-crawler.png)
 
 ## 6) Run the synchronization
 Start from the S3 File System asset (or schedule). Edge will create crawlers, run them, ingest Glue DBs into Collibra, and delete crawlers afterwards.
