@@ -25,6 +25,7 @@
 
 ## 4) Create three **Storage Catalog** domains
 - **CPS – Shipment Events**, **CPS – Transport Events**, **CPS – Equipment Events**.
+![CPSH Glue Demo](./images/create-domains.png)
 
 ## 5) Define three **crawlers** on the S3 File System asset
 - `cps-shipment` → `s3://<bucket>/cps_demo_dataset/shipment-events/`
