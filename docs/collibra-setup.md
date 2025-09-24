@@ -51,7 +51,16 @@ Start from the S3 File System asset (or schedule). Edge will create crawlers, ru
 ![CPSH Glue Demo](./images/glossary2.png)
 Link to columns (`transporteventtypecode`, `equipmenteventtypecode`, `location`).
 ![CPSH Glue Demo](./images/represented_by.png)
-
 3. **Promote** key tables/columns **Candidate → Accepted**.
+![CPSH Glue Demo](./images/accepted-status.png)
 4. **Policy**: create *External Sharing of CPS Events* policy and relate it to your tables. If needed, add relation types **Policy Governs → Table/Column/S3 File System** and include them in a **Scope**, then move your domains into that scope.
+![CPSH Glue Demo](./images/policy1.png)
+![CPSH Glue Demo](./images/policy2.png)
+![CPSH Glue Demo](./images/policy3.png)
+
 5. **Athena**: save the rolled‑calls query and add the **Saved Query link** as a Related resource on a Collibra asset; attach the `.sql` file for portability.
+![CPSH Glue Demo](./images/rolled-calls1.png)
+![CPSH Glue Demo](./images/rolled-calls2.png)
+-On the Rolled Calls asset → Attributes / Tags: add tags like ROLL, Rolled, Transport, Exception.
+![CPSH Glue Demo](./images/rolled-calls3.png)
+
