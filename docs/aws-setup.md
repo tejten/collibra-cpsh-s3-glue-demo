@@ -31,7 +31,6 @@
 ![CPSH Glue Demo](./images/create-iam-policy2.png)
 2. IAM → **Users → Create user** → attach the policies (CollibraEdgeGlueCrawlerManager, AmazonS3ReadOnlyAccess, AWSGlueConsoleFullAccess, PassRole - paste `templates/iam/user-inline-policy.json` )
 ![CPSH Glue Demo](./images/create-user.png)
-
 3. In the user → **Security credentials** → **Create access key**. Copy the Access key ID and Secret. You’ll paste these in Collibra Edge.
 
 ## 4) (Optional) Lake Formation
