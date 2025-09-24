@@ -61,6 +61,6 @@ Link to columns (`transporteventtypecode`, `equipmenteventtypecode`, `location`)
 5. **Athena**: save the rolled‑calls query and add the **Saved Query link** as a Related resource on a Collibra asset; attach the `.sql` file for portability.
 ![CPSH Glue Demo](./images/rolled-calls1.png)
 ![CPSH Glue Demo](./images/rolled-calls2.png)
--On the Rolled Calls asset → Attributes / Tags: add tags like ROLL, Rolled, Transport, Exception.
+On the Rolled Calls asset → Attributes / Tags: add tags like ROLL, Rolled, Transport, Exception.
 ![CPSH Glue Demo](./images/rolled-calls3.png)
 
