@@ -17,6 +17,7 @@
 - Make sure the user has the "Edge - View Edge connections and capabilities” permission.
 ![CPSH Glue Demo](./images/edge-connections-capabilities.png)
 - **Catalog → Register data source → S3 via Edge**
+![CPSH Glue Demo](./images/register-data-source.png)
 - Community: your demo community; Name: **CPS – S3 Lake**.
 - Save; open the asset → **Configuration → Connection details → Edit** → Runtime **Edge** → select your capability.
 
