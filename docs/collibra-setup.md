@@ -40,7 +40,18 @@ Start from the S3 File System asset (or schedule). Edge will create crawlers, ru
 
 ## 7) Governance 
 1. **Add Owner/Steward** on the three domains and the three tables.
-2. **Glossary**: create *CPS Glossary* and terms: **GTIN**, **GTOT**, **ARRI**, **ROLL**, **UN/LOCODE**. Link to columns (`transporteventtypecode`, `equipmenteventtypecode`, `location`).
+![CPSH Glue Demo](./images/domain-responsibility.png)
+2. **Glossary**: create *CPS Glossary* and terms: **GTIN**, **GTOT**, **ARRI**, **ROLL**, **UN/LOCODE**. 
+- GTIN (Gate in) – Container enters terminal/yard gate. Often start of dwell.
+- GTOT (Gate out) – Container leaves terminal/yard gate. Often end of dwell.
+- ARRI (Arrived) – Vessel/transport call actual or estimated arrival at a facility/port.
+- ROLL (Rolled) – Planned call skipped/postponed; cargo rolled to a later call/voyage.
+- UN/LOCODE – 5‑character location code per UNECE (e.g., USNYC, SG SIN).
+![CPSH Glue Demo](./images/glossary1.png)
+![CPSH Glue Demo](./images/glossary2.png)
+Link to columns (`transporteventtypecode`, `equipmenteventtypecode`, `location`).
+![CPSH Glue Demo](./images/represented_by.png)
+
 3. **Promote** key tables/columns **Candidate → Accepted**.
 4. **Policy**: create *External Sharing of CPS Events* policy and relate it to your tables. If needed, add relation types **Policy Governs → Table/Column/S3 File System** and include them in a **Scope**, then move your domains into that scope.
 5. **Athena**: save the rolled‑calls query and add the **Saved Query link** as a Related resource on a Collibra asset; attach the `.sql` file for portability.
