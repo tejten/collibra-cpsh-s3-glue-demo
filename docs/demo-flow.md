@@ -32,4 +32,16 @@ FROM t
 WHERE event_ts >= date_add('day', -3, current_timestamp)
 GROUP BY 1,2,3
 ORDER BY rolled_count DESC, last_roll_event DESC;
-```![CPSH Glue Demo](./images/athena.png)
+```
+![CPSH Glue Demo](./images/athena.png)
+
+## Business value:
+
+| Outcome                              | Without Collibra                                                                 | With Collibra                                                                                                                                               |
+|--------------------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Find the right event stream** (Shipment/Transport/Equipment) | S3/Glue tables by cryptic names; who owns them?                                   | Search by business term (“Rolled”, “UN/LOCODE”, “Gate in”), see **certified datasets** and owners.                                                           |
+| **Trust & compliance**               | “Is this the official feed?” “Can I use it externally?”                           | **Domain ownership, policies, status** (Candidate → Accepted), and **data contracts** visible.                                                              |
+| **Speed to insight**                 | Analysts ping SMEs; duplicate SQL; time lost reconciling definitions.             | **One catalog** across S3/Glue (and beyond), **lineage** to source, **saved queries** to start fast.                                                        |
+| **Risk reduction**                   | Untracked copies, unclear use rights, no deprecation path.                        | **Stewardship, usage guidance, retention/deprecation workflows, access requests.**                                                                          |
+| **Scale beyond AWS**                 | Every platform has its own catalog; no single pane.                               | **Cross-platform catalog + glossary** (Snowflake, Databricks, Redshift, etc.) with one language and policy set.                                             |
+
