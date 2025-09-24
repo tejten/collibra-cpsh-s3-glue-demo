@@ -11,7 +11,7 @@
 - *Meaning*: open `equipmenteventtypecode` and show **GTIN/GTOT** glossary relations.
 ![CPSH Glue Demo](./images/business-terms.png)
 - *Actionable*: click **Open in Athena (Saved Query)** to run **Rolled Calls – Last 3 Days**.
-![CPSH Glue Demo](./images/business-terms.png)
+![CPSH Glue Demo](./images/athena.png)
 
 ## Athena: Rolled Calls – Last 3 Days
 Use the universal version that works whether `location` is a ROW or a JSON string:
